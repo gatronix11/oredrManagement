@@ -65,6 +65,5 @@ app.post('/updateOrder', (req, res) => {
         .catch(err => console.log(err));
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
