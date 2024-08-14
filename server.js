@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // MongoDB Atlas connection
-const dbURI = 'mongodb+srv://gt11:gtx123@cluster0.km5cz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const dbURI = process.env.MONGODB_URI || 'mongodb+srv://gt11:gtx123@cluster0.km5cz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch(err => console.log(err));
