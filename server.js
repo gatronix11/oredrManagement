@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
-const port = 3000;
 
 // MongoDB Atlas connection
 const dbURI = process.env.MONGODB_URI || 'mongodb+srv://gt11:gtx123@cluster0.km5cz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
